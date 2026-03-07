@@ -3,8 +3,6 @@ kind: Deployment
 metadata:
   name: bms-app
   namespace: ajay-ns
-  labels:
-    app: bms
 spec:
   replicas: 2
   selector:
