@@ -3,12 +3,11 @@ kind: Service
 metadata:
   name: bms-service
   namespace: ajay-ns
-  labels:
-    app: bms
 spec:
-  type: LoadBalancer
-  ports:
-  - port: 80
-    targetPort: 3000  # Replace with the port your app runs on
   selector:
     app: bms
+  ports:
+    - port: 80
+      targetPort: 80
+      protocol: TCP
+  type: LoadBalancer
